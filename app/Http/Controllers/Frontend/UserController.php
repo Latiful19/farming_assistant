@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class UserController extends Controller
 {
-    public function home()
+    public function register()
     {
-        return view ('frontend.layouts.home');
+        return view ('frontend.layouts.userregister');
     }
+    
 }

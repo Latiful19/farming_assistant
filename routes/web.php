@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Frontend\HomeController as FrontendHome;
+use App\Http\Controllers\Frontend\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\FarmerController;
 use App\Http\Controllers\Backend\HomeController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\Backend\AllRegisteredcontroller;
 use App\Http\Controllers\Backend\Complaintscontroller;
 use App\Http\Controllers\Backend\Advertisementscontroller;
 use App\Http\Controllers\Backend\Farmingtipscontroller;
+use App\Http\Controllers\Backend\UserController as BackendUser;
 
 
 
@@ -26,15 +28,17 @@ use App\Http\Controllers\Backend\Farmingtipscontroller;
 |
 */
 Route::get('/',[FrontendHome::class,'home'])->name(name:'home');
+Route::get('/register',[UserController::class,'register'])->name('userregister');
 
 
 
 
-
+Route::get('admin/login',[BackendUser::class,'Login'])->name('admin.login');
 // admin panel
-Route::group(['prefix'=>'admin'],function(){
+Route::group(['prefix'=>'admin','midleware'=>'auth'],function(){
 
-Route::get('/',[HomeController::class,'dashboard']);
+
+Route::get('/',[HomeController::class,'dashboard'])->name(name:'dashboard');
 
 //farmer
 Route::get('/farmer',[FarmerController::class,'list'])->name('farmer.list');
