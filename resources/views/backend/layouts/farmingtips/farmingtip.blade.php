@@ -1,6 +1,5 @@
 @extends('backend.master')
 @section('content')
-<h1>hola</h1>
 <section class="ftco-section">
 <div class="container">
 <!-- <div class="row justify-content-center"> -->

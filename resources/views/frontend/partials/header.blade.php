@@ -22,9 +22,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="login-box">
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
-  Register here
-</button>
+                    <a class="btn btn-primary" href="{{route('userregister')}}" role="button">Register Here</a>
                         
 						
 					</div>
@@ -32,7 +30,7 @@
                         <div id="offer-box" class="carouselTicker">
                             <ul class="offer-box">
                                 <li>
-                                    <i class="fab fa-opencart"></i> Yur problem, Our solution
+                                    <i class="fab fa-opencart"></i> Your problem, Our solution
                                 </li>
                                 <li>
                                     <i class="fab fa-opencart"></i> Get tips about Vegetables
@@ -87,65 +85,37 @@
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
-                            <ul class="dropdown-menu">
-								<li><a href="{{url('/frontend/shop.html')}}">Sidebar Shop</a></li>
-								<li><a href="{{url('/frontend/shop-detail.html')}}">Shop Detail</a></li>
-                                <!-- <li><a href="{{url('/frontend/cart.html')}}">Cart</a></li> -->
-                                <li><a href="{{url('/frontend/checkout.html')}}">Checkout</a></li>
-                                <li><a href="{{url('/frontend/my-account.html')}}">My Account</a></li>
-                                <li><a href="{{url('/frontend/wishlist.html')}}">Wishlist</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('/frontend/gallery.html')}}">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('/frontend/contact-us.html')}}">Contact Us</a></li>
+                        <li class="nav-item">
+
+
+                        <li class="nav-item">
+            <a class="nav-link" href="{{route('ComplaintStatus')}}">
+              <i class="sv-nav-link-icon"></i>
+              <span class="menu-title">Complaint Status</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('complaint')}}">
+              <i class="sv-nav-link-icon"></i>
+              <span class="menu-title">Complaint </span>
+            </a>
+          </li>
+                
+         
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('advertise')}}">
+              <i class="sv-nav-link-icon"></i>
+              <span class="menu-title">Advertisements </span>
+            </a>
+          </li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
-
-                <!-- Start Atribute Navigation -->
-                <!-- <div class="attr-nav">
-                    <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu">
-							<a href="#">
-								<i class="fa fa-shopping-bag"></i>
-								<span class="badge">3</span>
-								<p>My Cart</p>
-							</a>
-						</li>
-                    </ul>
-                </div> -->
-                <!-- End Atribute Navigation -->
+                
             </div>
             <!-- Start Side Menu -->
-            <div class="side">
-                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-                <li class="cart-box">
-                    <ul class="cart-list">
-                        <li>
-                            <a href="#" class="photo"><img src="frontend/frontend/images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Delica omtantur </a></h6>
-                            <p>1x - <span class="price">$80.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="frontend/images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Omnes ocurreret</a></h6>
-                            <p>1x - <span class="price">$60.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="frontend/images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Agam facilisis</a></h6>
-                            <p>1x - <span class="price">$40.00</span></p>
-                        </li>
-                        <li class="total">
-                            <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
-                            <span class="float-right"><strong>Total</strong>: $180.00</span>
-                        </li>
-                    </ul>
-                </li>
-            </div>
+            
             <!-- End Side Menu -->
         </nav>
 
@@ -169,7 +139,7 @@
 
 
 
-
+    
 
 
 

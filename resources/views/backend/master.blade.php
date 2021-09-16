@@ -33,56 +33,24 @@
 
 <body>
   <div class="container-scroller"> 
-    <!-- partial:partials/_navbar.html -->
+    
     @include('backend.partials.header')
     
-    <!-- partial -->
+  
     <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_settings-panel.html -->
-          
-      <div id="right-sidebar" class="settings-panel">
-        <i class="settings-close ti-close"></i>
-        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="todo-tab" data-bs-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="chats-tab" data-bs-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="setting-content">
-          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
-            <div class="add-items d-flex px-3 mb-0">
-              <form class="form w-100">
-                <div class="form-group d-flex">
-                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
-                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
-                </div>
-              </form>
-            </div>
-            
-                <small class="text-muted my-auto">19 min</small>
-              </li>
-            </ul>
-          </div>
-          <!-- chat tab ends -->
-        </div>
-      </div>
-      <!-- partial -->
-      <!-- partial:partials/_sidebar.html -->
+     
       @include('backend.partials.sidebar')
 
-      <!-- partial -->
+     
       <div class="main-panel">
         
 @yield('content')
 
 
-      <!-- main-panel ends -->
     </div>
-    <!-- page-body-wrapper ends -->
+    
   </div>
-  <!-- container-scroller -->
+  
 
   <!-- plugins:js -->
   <script src="{{url('/js/vendor.bundle.base.js')}}"></script>

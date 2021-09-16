@@ -8,7 +8,9 @@
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br> LK Farming Assistant</strong></h1>
                             <p class="m-b-40">Farming is awesome <br> It will change your thinking about farming</p>
-                            <p><a class="btn hvr-hover" href="#">NEW TIPS</a></p>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+  NEW TIPS
+</button>
                         </div>
                     </div>
                 </div>
@@ -20,7 +22,9 @@
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br> LK Farming Assistant</strong></h1>
                             <p class="m-b-40">Farming is awesome <br> It will change your thinking about farming</p>
-                            <p><a class="btn hvr-hover" href="#">NEW TIPS</a></p>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+  NEW TIPS
+</button>
                         </div>
                     </div>
                 </div>
@@ -32,7 +36,9 @@
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To <br> LK Farming Assistant</strong></h1>
                             <p class="m-b-40">Farming is awesome <br> It will change your thinking about farming</p>
-                            <p><a class="btn hvr-hover" href="#">NEW TIPS</a></p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  NEW TIPS
+</button>
                         </div>
                     </div>
                 </div>

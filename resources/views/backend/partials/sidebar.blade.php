@@ -22,20 +22,22 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('allregistered.registered')}}">
               <i class="sv-nav-link-icon"></i>
-              <span class="menu-title">All Registered</span>
+              <span class="menu-title">Users</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('complaints.complaint')}}">
-              <i class="sv-nav-link-icon"></i>
-              <span class="menu-title">Complaints</span>
-            </a>
-          </li>
+          
          
           <li class="nav-item">
             <a class="nav-link" href="{{route('farmingtips.farmingtip')}}">
               <i class="sv-nav-link-icon"></i>
               <span class="menu-title">Farming Tips</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('allcomplaints.complaints')}}">
+              <i class="sv-nav-link-icon"></i>
+              <span class="menu-title">complaints</span>
             </a>
           </li>
 

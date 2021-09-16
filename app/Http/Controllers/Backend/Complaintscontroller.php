@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class Complaintscontroller extends Controller
+class ComplaintsController extends Controller
 {
-    public function complaint()
+    public function complaints()
     {
-
-        return view('backend.layouts.complaints.complaint');
+        return view ('backend.layouts.allcomplaints.complaints');
     }
+    
 }

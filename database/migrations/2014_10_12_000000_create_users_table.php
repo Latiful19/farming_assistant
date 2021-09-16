@@ -12,20 +12,25 @@ class CreateUsersTable extends Migration
      * @return void
      */
     public function up()
+
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->text('Full_Name');
+            $table->text('User_Name');
+            $table->string('Email');
+            $table->integer('Mobile_No');
+            $table->text('Address');
             $table->string('password');
-            $table->rememberToken();
+            $table->string('role')->default();
             $table->timestamps();
+           
+
         });
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the migrations.z
      *
      * @return void
      */

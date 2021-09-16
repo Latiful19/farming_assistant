@@ -8,12 +8,7 @@ use App\Models\Farmeraccount;
 
 class Farmercontroller extends Controller
 {
-    public function list()
-    {
-        $info=Farmeraccount::all();
-
-       return view('backend.layouts.farmer.list',compact('info'));
-    }
+    
 
     public function openacc(){
         // dd($info->all());
