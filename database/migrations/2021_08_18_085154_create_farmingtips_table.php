@@ -15,9 +15,11 @@ class CreateFarmingtipsTable extends Migration
     {
         Schema::create('farmingtips', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('Phone');
-            $table->string('address');
+            $table->text('Category');
+            $table->text('Crop_Name');
+            $table->text('Problem_Type');
+            
+
             $table->timestamps();
         });
         return redirect()->route('farmingtips.farmingtip');

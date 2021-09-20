@@ -4,6 +4,7 @@ use App\Http\Controllers\Frontend\HomeController as FrontendHome;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\ComplaintStatusController;
 use App\Http\Controllers\Frontend\ComplaintController;
+use App\Http\Controllers\Frontend\TipsController;
 use App\Http\Controllers\Frontend\AdvertiseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\ComplaintsController;
@@ -23,6 +24,7 @@ use App\Http\Controllers\Backend\UserController as BackendUser;
 
 Route::get('/',[FrontendHome::class,'home'])->name(name:'home');
 Route::get('/register',[UserController::class,'register'])->name('userregister');
+Route::get('/farmingtips',[TipsController::class,'farmingtips'])->name('farmingtips.tips');
 Route::post('/store',[UserController::class,'registerstore'])->name('store');
 Route::get('/complaintstatus',[ComplaintStatusController::class,'complaint'])->name('ComplaintStatus');
 Route::get('/complaint',[ComplaintController::class,'complaints'])->name('complaint');
@@ -39,6 +41,7 @@ Route::get('/',[HomeController::class,'dashboard'])->name(name:'dashboard');
 
 //farmer
 Route::get('/users',[BackendUser::class,'farmerlist'])->name('farmer.list');
+Route::post('/farmer/account',[FarmingtipsController::class,'farmingtips'])->name('farmingtip');
 Route::get('/farmer/account',[FarmerController::class,'openacc'])->name('farmer.openacc');
 Route::post('/farmer/accountopen',[FarmerController::class,'farmeropenacc'])->name('farmer.openaccount');
 

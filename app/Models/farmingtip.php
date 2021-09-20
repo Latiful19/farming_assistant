@@ -8,6 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class farmingtip extends Model
 {
     use HasFactory;
-    protected $table='farmingtip';
     protected $guarded=[];
 }
