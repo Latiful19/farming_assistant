@@ -57,11 +57,13 @@
         </button>
       </div>
       <div class="modal-body">
-      <form>
+
+      <form action="{{route('farmingtips.store')}}" method="post">
+        @csrf
           <!-- TIPS ADDING FORM -->
           <div class="form-group col-md-4">
-      <label for="inputState">Category</label>
-      <select id="inputState" class="form-control">
+      <label for="category">Category</label>
+      <select id="inputState" class="form-control" name="category" id="category">
         <option selected>Select Category</option>
         <option>Vegetable</option>
         <option>Fruit</option>
@@ -72,28 +74,29 @@
 
     <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputCropName">Crop Name</label>
-      <input type="text" class="form-control" id="inputCropName">
+      <label for="crop_name">Crop Name</label>
+      <input type="text" name="crop_name" class="form-control" id="crop_name">
     </div>
   
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputProblem">Problem Type</label>
-      <input type="text" class="form-control" id="inputProblem">
+      <label for="problem_type">Problem Type</label>
+      <input type="text" name="problem_type" class="form-control" id="problem_type">
     </div>
     
     <div class="form-group">
-    <label for="exampleFormControlTextarea1">Description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="description">Description</label>
+    <textarea name="description" id="description" placeholder="Enter description">
+
+    </textarea>
   </div>
 
   <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
 </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
-        <button type="button" class="btn btn-primary">Post</button>
-      </div>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+      
     </div>
   </div>
 </div>

@@ -12,3 +12,8 @@ class ComplaintController extends Controller
         return view ('frontend.layouts.complaint');
     }
 }
+public function complaintstore(Request $request)
+{
+    
+    return view();
+}

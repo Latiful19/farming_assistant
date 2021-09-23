@@ -15,18 +15,19 @@ $categories=farmingtip::get();
 
         return view ('backend.layouts.farmingtips.farmingtip',compact('categories'));
     } 
-    public function farmingtips(Request $request)
+    
+    public function store (Request $request)
     {
-        User::create([
-            'Category'=>$request->fullname,
-            'Crop_Name'=>$request->username,
-            'Problem_Type'=>$request->email,
+       Farmingtip::create([
+            'Category'=>$request->category,
+            'Crop_Name'=>$request->crop_name,
+            'Problem_Type'=>$request->problem_type,
             
           
                
         ]);
            
-           return redirect()->back()->with('success','User Registration Succeccfully.');
+           return redirect()->back()->with('success','Tips added successfully.');
     }
 
 
