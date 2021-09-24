@@ -1,11 +1,9 @@
 @extends('frontend.master')
 @section('contents')
   
-<form>
-  <div class="form-group">
-    <label for="ComplaintID">Complaint ID</label>
-    <input type="text" class="form-control" id="ComplaintID" placeholder="ComplaintID">
-  </div>
+<form action="{{route('complaint.store')}}" method="post">
+  @csrf
+  
 
   <div class="form-group col-md-4">
       <label for="inputCategory">Category</label>

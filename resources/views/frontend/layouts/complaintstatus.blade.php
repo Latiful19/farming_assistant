@@ -5,17 +5,19 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">Farmer ID</th>
-      <th scope="col">Complaint</th>
+      <th scope="col">Complaint Name</th>
       <th scope="col">Complaint ID</th>
       <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
+  @foreach($Complaints as $Complaint)
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>{{$product->name}}</td>
+      <td>{{$product->name}}</td>
+      <td>{{$product->name}}</td>
+      <td>{{$product->name}}</td>
     </tr>
     <tr>
       <th scope="row">2</th>
