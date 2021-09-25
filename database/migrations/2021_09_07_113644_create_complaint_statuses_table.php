@@ -16,7 +16,7 @@ class CreateComplaintStatusesTable extends Migration
         Schema::create('complaint_statuses', function (Blueprint $table) {
             $table->id();
             $table->string('name',100);
-            $table->text('details')->nullable();
+            $table->string('details')->nullable();
             $table->string('image')->nullable();
             $table->string('status',10)->default('active');
             $table->timestamps();

@@ -4,17 +4,28 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Complaint;
+
 
 class ComplaintController extends Controller
 {
     public function complaints()
     {
-        return view ('frontend.layouts.complaint');
+        $complaints=complaint::all();
+        return view ('frontend.layouts.complaint',compact('complaints'));
     }
 
 public function complaintstore (Request $request)
 {
-    
-    dd($request->all());
+    // dd($request->all());
+    Complaint::create([
+
+        'Category'=>$request->category,
+        'problem_name'=>$request->Problem_name,
+        'Image'=>$request->image,
+        'Description'=>$request->description,
+    ]);
+    return redirect()->back();
+
 }
 }

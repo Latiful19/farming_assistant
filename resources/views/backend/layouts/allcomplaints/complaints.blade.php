@@ -7,6 +7,7 @@
       <th scope="col">Farmer ID</th>
       <th scope="col">Complaint</th>
       <th scope="col">Complaint ID</th>
+      <th scope="col">image</th>
       <th scope="col">Status</th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
+      <td>null</td>
     </tr>
     <tr>
       <th scope="row">2</th>

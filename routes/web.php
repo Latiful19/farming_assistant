@@ -28,7 +28,9 @@ Route::get('/farmingtips',[TipsController::class,'farmingtips'])->name('farmingt
 Route::post('/store',[UserController::class,'registerstore'])->name('store');
 Route::get('/complaintstatus',[ComplaintStatusController::class,'complaint'])->name('ComplaintStatus');
 Route::get('/complaint',[ComplaintController::class,'complaints'])->name('complaint');
+
 Route::post('/complaint/store',[ComplaintController::class,'complaintstore'])->name('complaint.store');
+
 Route::get('/advertisements',[AdvertiseController::class,'advertisements'])->name('advertise');
 
 // Backend

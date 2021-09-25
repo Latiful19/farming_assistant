@@ -7,7 +7,7 @@
 
   <div class="form-group col-md-4">
       <label for="inputCategory">Category</label>
-      <select id="inputCategory" class="form-control">
+      <select id="inputCategory" class="form-control" name='category'>
         <option selected>Choose...</option>
         <option>Crop</option>
         <option>Vegetable</option>
@@ -17,19 +17,23 @@
     </div>
 </div>
 
+<div class="form-group">
+			<label for="text">Problem name</label>
+            <input type="text" class="form-control" id="text" name="Problem_name" required="required">
+        </div>
+
+
   <div class="form-group">
     <label for="exampleFormControlFile1">Image</label>
     <div class="custom-file">
     <input type="file" class="form-control" name='image' >
     
     <br></br>
-  </div>
-
-
+    
 
   <div class="form-group">
     <label for="Textarea">Description</label>
-    <textarea class="form-control" id="Textarea" rows="10"></textarea>
+    <textarea name="description" class="form-control" id="Textarea" rows="10"></textarea>
   </div>
 </form>
 
