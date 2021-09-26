@@ -41,6 +41,13 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('advertisements.advertisement')}}">
+              <i class="sv-nav-link-icon"></i>
+              <span class="menu-title">Post Advertise</span>
+            </a>
+          </li>
+
           
           
           

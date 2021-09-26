@@ -14,6 +14,7 @@
 <table class="table">
 <thead class="thead-primary">
 <tr>
+<th>Category-ID</th>   
 <th>Category</th>
 <th>Crop Name</th>
 <th>Problem Type</th>
@@ -22,10 +23,16 @@
 </thead>
 <tbody>
 <tr>
-<th scope="row" class="scope">Fruit</th>
-<td>Mango</td>
-<td>Insect Attack</td>
+@foreach($categories as $key=>$cat)
+
+<th scope="row">{{$key+1}}
+
+<th scope="row">{{$cat->Category}}</th>
+<th scope="row">{{$cat->Crop_Name}}</th>
+<th scope="row">{{$cat->Problem_Type}}</th>
 <td><a href="#" class="btn btn-primary">View Details</a></td>
+
+@endforeach
 </tr>
 
 </tbody>

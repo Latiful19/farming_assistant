@@ -1,38 +1,34 @@
 @extends('backend.master')
 @section('content')
    
-<table class="table">
+
+  <table class="table">
+ 
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Farmer ID</th>
-      <th scope="col">Complaint</th>
+      
       <th scope="col">Complaint ID</th>
-      <th scope="col">image</th>
+      <th scope="col">User name</th>
+      <th scope="col">Category</th>
+      <th scope="col">problem name</th>
+      <th scope="col">Image</th>
       <th scope="col">Status</th>
+      <th scope="col">Action</th>
+      
     </tr>
   </thead>
   <tbody>
+  @foreach($complaints as $data)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>null</td>
+      <td>{{$data->id}}</td>
+      <td>{{$data->User_name}}</td>
+      <td>{{$data->Category}}</td>
+      <td>{{$data->problem_name}}</td>
+      <td>{{$data->Image}}</td>
+      <td>{{$data->status}}</td>
+      <td><a href="#" class="btn btn-primary">View Details</a></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+@endforeach
 
 
 

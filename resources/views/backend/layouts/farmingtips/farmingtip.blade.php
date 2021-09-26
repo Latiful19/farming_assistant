@@ -21,11 +21,10 @@
 <th>Category</th>
 <th>Crop Name</th>
 <th>Problem Type</th>
-<th>Action</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+
 @foreach($categories as $key=>$cat)
 <tr>
 <th scope="row">{{$key+1}}
@@ -89,13 +88,16 @@
     <textarea name="description" id="description" placeholder="Enter description">
 
     </textarea>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
   </div>
 
   <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
 </form>
       </div>
     
-        <button type="submit" class="btn btn-primary">Submit</button>
+        
       
     </div>
   </div>

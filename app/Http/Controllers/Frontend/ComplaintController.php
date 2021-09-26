@@ -21,6 +21,7 @@ public function complaintstore (Request $request)
     Complaint::create([
 
         'Category'=>$request->category,
+        'User_name'=>$request->User_name,
         'problem_name'=>$request->Problem_name,
         'Image'=>$request->image,
         'Description'=>$request->description,

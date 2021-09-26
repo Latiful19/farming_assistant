@@ -15,10 +15,11 @@ class CreateComplaintStatusesTable extends Migration
     {
         Schema::create('complaint_statuses', function (Blueprint $table) {
             $table->id();
-            $table->string('name',100);
-            $table->string('details')->nullable();
-            $table->string('image')->nullable();
-            $table->string('status',10)->default('active');
+            $table->string('Category');
+            $table->string('problem_name');
+            $table->string('Image')->nullable();
+            $table->text('Description');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

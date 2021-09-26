@@ -15,6 +15,7 @@ class CreateComplaintsTable extends Migration
     {
         Schema::create('complaints', function (Blueprint $table) {
             $table->id();
+            $table->string('User_name');
             $table->string('Category');
             $table->string('problem_name');
             $table->string('Image')->nullable();

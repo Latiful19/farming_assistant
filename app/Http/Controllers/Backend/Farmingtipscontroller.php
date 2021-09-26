@@ -10,9 +10,7 @@ class Farmingtipscontroller extends Controller
 {
     public function farmingtip()
     {
-$categories=farmingtip::get();
-
-
+        $categories=farmingtip::get();
         return view ('backend.layouts.farmingtips.farmingtip',compact('categories'));
     } 
     

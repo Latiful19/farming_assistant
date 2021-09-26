@@ -4,6 +4,17 @@
 <form action="{{route('complaint.store')}}" method="post">
   @csrf
   
+  <div class="form-group">
+			<label for="text">User name</label>
+            <input type="text" class="form-control" id="text" name="User_name" required="required">
+        </div>
+
+<div class="form-group">
+			<label for="text">Problem name</label>
+            <input type="text" class="form-control" id="text" name="Problem_name" required="required">
+        </div>
+
+
 
   <div class="form-group col-md-4">
       <label for="inputCategory">Category</label>
@@ -17,10 +28,6 @@
     </div>
 </div>
 
-<div class="form-group">
-			<label for="text">Problem name</label>
-            <input type="text" class="form-control" id="text" name="Problem_name" required="required">
-        </div>
 
 
   <div class="form-group">

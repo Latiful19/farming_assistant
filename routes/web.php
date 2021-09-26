@@ -58,4 +58,5 @@ Route::post('/farmingtip/store',[Farmingtipscontroller::class,'store'])->name('f
 Route::get('/retailer',[RetailersController::class,'retailer'])->name('retailers.retailer');
 Route::get('/registered',[BackendUser::class,'userlist'])->name('allregistered.registered');
 Route::get('/advertisement',[Advertisementscontroller::class,'advertisement'])->name('advertisements.advertisement');
+Route::post('/advertisemnts/advertisementstore',[Advertisementscontroller::class,'advertisementstore'])->name('advertisements.advertisementstore');
 });
