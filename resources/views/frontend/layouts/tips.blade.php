@@ -30,11 +30,11 @@
 <th scope="row">{{$cat->Category}}</th>
 <th scope="row">{{$cat->Crop_Name}}</th>
 <th scope="row">{{$cat->Problem_Type}}</th>
-<td><a href="#" class="btn btn-primary">View Details</a></td>
+<th><a href="#" class="btn btn-primary">View Details</a></th>
 
-@endforeach
+
 </tr>
-
+@endforeach
 </tbody>
 </table>
 </div>

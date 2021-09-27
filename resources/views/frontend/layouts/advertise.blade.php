@@ -2,36 +2,33 @@
 @section('contents')
 <table class="table table-striped">
   <thead>
+    
     <tr>
-      <th scope="col">Retailer ID</th>
-      <th scope="col">Email</th>
-      <th scope="col">Crop Name</th>
+    <th scope="col">Ad ID</th>
+      <th scope="col">Product Category</th>
+      <th scope="col">Product Name</th>
       <th scope="col">Amount</th>
-      <th scope="col">Deadline</th>
+      <th scope="col">Quality</th>
+      <th scope="col">Price</th>
+      <th scope="col">Probable Suply Date</th>
+      <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
+  @foreach($advertisements as $Ad)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
+      <td>{{$Ad->id}}</td>
+      <td>{{$Ad->Product_Category}}</td>
+      <td>{{$Ad->Product_Name}}</td>
+      <td>{{$Ad->Amount}}</td>
+      <td>{{$Ad->Quality}}</td>
+      <td>{{$Ad->Price}}</td>
+      <td>{{$Ad->Probable_Suply_Date}}</td>
+      <td>{{$Ad->Status}}</td>
+      
     </tr>
-    <tr>
-    <th scope="row">2</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-    <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-  </tbody>
+    @endforeach
+</tbody>
 </table>
+
 @endsection

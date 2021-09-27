@@ -12,6 +12,24 @@ class UserController extends Controller
     {
         return view('backend.layouts.login');
     }
+
+    public function loginPost(Request $request)
+    {
+        $credentials=$request->except('_token');
+
+        if(Auth::attempt($credentials))
+        {
+           if(auth()->user()->role=='admin')
+           {
+               return redirect()->route('dashboard');
+          
+           }
+
+        }
+
+        return redirect()->back()->with('message','invalid user info.');
+    }
+    
     public function farmerlist()
     {
         $farmers=user::where('role','=','farmer')->get();

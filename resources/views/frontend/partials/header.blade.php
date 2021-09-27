@@ -117,7 +117,7 @@
                 
          
           <li class="nav-item">
-            <a class="nav-link" href="{{route('advertise')}}">
+            <a class="nav-link" href="{{route('advertise.advertisement')}}">
               <i class="sv-nav-link-icon"></i>
               <span class="menu-title">Advertisements </span>
             </a>
