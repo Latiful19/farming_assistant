@@ -17,14 +17,15 @@ class Userseeder extends Seeder
         user::create
         (
             [
-                'id'=>'1',
                 'Full_Name'=>'Admin',
-                'User_Name'=>'Leon',
+                'User_Name'=>'AdmiN',
                 'role'=>'admin',
-                'Email'=>'leon568@gmail.com',
+                'Email'=>'admin@gmail.com',
                 'password'=>bcrypt('123456'),
                 'Mobile_No'=>'01703192196',
-                'Address'=>'Uttara',
+                'Address'=>'Uttara'
+                
+
                 
 
     

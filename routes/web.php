@@ -34,16 +34,18 @@ Route::post('/complaint/store',[ComplaintController::class,'complaintstore'])->n
 Route::get('/advertisements',[AdvertiseController::class,'advertisements'])->name('advertise');
 
 Route::get('/advertisemnts/advertisement',[Advertisecontroller::class,'advertise'])->name('advertise.advertisement');
+Route::get('/login',[UserController::class,'userlogin'])->name('userlogin');
 
 // Backend
 
-Route::get('admin/login',[BackendUser::class,'login'])->name('admin.login');
+Route::get('/admin/login',[BackendUser::class,'login'])->name('admin.login');
 Route::post('/admin/login/post',[BackendUser::class,'loginPost'])->name('admin.login.post');
 // admin panel
-Route::group(['prefix'=>'admin','midleware'=>'auth','role'],function(){
+Route::group(['prefix'=>'admin','middleware'=>'auth','role'],function(){
 
 
 Route::get('/',[HomeController::class,'dashboard'])->name('dashboard');
+Route::get('/logout',[BackendUser::class,'logout'])->name('logout');
 
 //farmer
 Route::get('/users',[BackendUser::class,'farmerlist'])->name('farmer.list');

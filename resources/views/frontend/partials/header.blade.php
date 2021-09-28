@@ -122,6 +122,14 @@
               <span class="menu-title">Advertisements </span>
             </a>
           </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('userlogin')}}">
+              <i class="sv-nav-link-icon"></i>
+              <span class="menu-title">Login</span>
+            </a>
+          </li>
                     </ul>
                 </div>
                 

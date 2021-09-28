@@ -1,140 +1,167 @@
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<!--author:starttemplate-->
-<!--reference site : starttemplate.com-->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords"
-          content="unique login form,leamug login form,boostrap login form,responsive login form,free css html login form,download login form">
-    <meta name="author" content="leamug">
-    <title>LK Farming Assistant</title>
-    <link href="css/style.css" rel="stylesheet" id="style">
-    <!-- Bootstrap core Library -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    <!-- Font Awesome-->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Login Page</title>
+    <!--Made with love by Mutiullah Samim -->
+
+    <!--Bootsrap 4 CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<style type="text/css">
+<style type="text/css" >
+    /* Made with love by Mutiullah Samim*/
 
+    @import url('https://fonts.googleapis.com/css?family=Numans');
 
-body {
-  background-image:url('https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80');
-  background-position:center;
-  background-size:cover;
-  
-  -webkit-font-smoothing: antialiased;
-  font: bold 20px Roboto,arial,sans-serif;
-  font-family: 'Lucida Consol', arial!important;
-}
+    html,body{
+        background-image: url('https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        font-family: 'Numans', sans-serif;
+    }
 
-.container {
-    padding: 100px;
-}
-::placeholder { 
-    color: #ffffff!important;
-    opacity: 1; 
-    font-size:18px!important;
-}
-.form-login {
-    background-color: rgba(0,0,0,0.55);
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
-    border-color:#d2d2d2;
-    border-width: 10px;
-    color:white;
-    box-shadow:0 1px 0 #cfcfcf;
-}
-.form-control{
-    background:transparent!important;
-    color:white!important;
-    font-size: 22px!important;
-}
-h1{
-    color:white!important;
-}
-h4 { 
- border:0 solid #fff; 
- border-bottom-width:2px;
- padding-bottom:10px;
- text-align: center;
-}
+    .container{
+        height: 100%;
+        align-content: center;
+    }
 
-.form-control {
-    border-radius: 10px;
-}
-.text-white{
-    color: white!important;
-}
-.wrapper {
-    text-align: center;
-}
-.footer p{
-    font-size: 13px;
-}
+    .card{
+        height: 370px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 400px;
+        background-color: rgba(0,0,0,0.5) !important;
+    }
 
+    .social_icon span{
+        font-size: 60px;
+        margin-left: 10px;
+        color: #FFC312;
+    }
+
+    .social_icon span:hover{
+        color: white;
+        cursor: pointer;
+    }
+
+    .card-header h3{
+        color: white;
+    }
+
+    .social_icon{
+        position: absolute;
+        right: 20px;
+        top: -45px;
+    }
+
+    .input-group-prepend span{
+        width: 50px;
+        background-color: #FFC312;
+        color: black;
+        border:0 !important;
+    }
+
+    input:focus{
+        outline: 0 0 0 0  !important;
+        box-shadow: 0 0 0 0 !important;
+
+    }
+
+    .remember{
+        color: white;
+    }
+
+    .remember input
+    {
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+
+    .login_btn{
+        color: black;
+        background-color: #FFC312;
+        width: 100px;
+    }
+
+    .login_btn:hover{
+        color: black;
+        background-color: white;
+    }
+
+    .links{
+        color: white;
+    }
+
+    .links a{
+        margin-left: 4px;
+    }
 </style>
-
-
-
 <body>
-
-<!-- Page Content -->
 <div class="container">
-    <div class="row">
-        <div class="col-md-offset-4 col-md-4 text-center">
-    <h1 class='text-white'>Admin </h1>
-              <div class="form-login"></br>
-                <h4>Login</h4>
-                </br>
-                <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="username"/>
-                </br></br>
-                <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="password"/>
-                </br></br>
-                <div class="wrapper">
-                        <span class="group-btn">
-                            <a href="#" class="btn btn-danger btn-md">login <i class="fa fa-sign-in"></i></a>
-                        </span>
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Sign In</h3>
+                <div class="d-flex justify-content-end social_icon">
+                    <span><i class="fab fa-facebook-square"></i></span>
+                    <span><i class="fab fa-google-plus-square"></i></span>
+                    <span><i class="fab fa-twitter-square"></i></span>
                 </div>
             </div>
+
+
+            @if(session()->has('message'))
+                <span class="alert alert-danger">{{session()->get('message')}}</span>
+            @endif
+            <div class="card-body">
+
+                <form action="{{route('admin.login.post')}}" method="post">
+                    @csrf
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input name="email" type="email" class="form-control" placeholder="Email">
+
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input name="password" type="password" class="form-control" placeholder="password">
+                    </div>
+                    <div class="row align-items-center remember">
+                        <input type="checkbox">Remember Me
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn float-right login_btn">
+                    </div>
+                </form>
+
+            </div>
+            
         </div>
     </div>
-    </br></br></br>
-    <!--footer-->
-
-
-    <style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: grey;
-  color: white;
-  text-align: center;
-}
-</style>
-
+</div>
+</body>
 <div class="footer">
   <p>© 2021 All rights reserved | Design by Latiful Khabir|</p>
   <p><a>LK Farming Assiatant</a></p>
 </div>
-
-</div>
-</body>
 </html>
+
 
