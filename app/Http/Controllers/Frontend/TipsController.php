@@ -13,4 +13,9 @@ class TipsController extends Controller
         $categories=farmingtip::get();
         return view ('frontend.layouts.tips',compact('categories'));
     }
+    public function descriptions()
+    {
+        $details=farmingtip::get();
+        return view ('frontend.layouts.descriptions',compact('details'));
+    }
 }

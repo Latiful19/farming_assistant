@@ -26,7 +26,7 @@
       <td>{{$data->problem_name}}</td>
       <td>{{$data->Image}}</td>
       <td>{{$data->status}}</td>
-      <td><a href="#" class="btn btn-primary">View Details</a></td>
+      <td><a href="{{route('description')}}" class="btn btn-primary">View Details</a></td>
     </tr>
 @endforeach
 

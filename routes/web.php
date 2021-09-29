@@ -23,23 +23,31 @@ use App\Http\Controllers\Backend\UserController as BackendUser;
 // Frontend
 
 Route::get('/',[FrontendHome::class,'home'])->name(name:'home');
-Route::get('/register',[UserController::class,'register'])->name('userregister');
-Route::get('/farmingtips',[TipsController::class,'farmingtips'])->name('farmingtips.tips');
-Route::post('/store',[UserController::class,'registerstore'])->name('store');
-Route::get('/complaintstatus',[ComplaintStatusController::class,'complaint'])->name('ComplaintStatus');
-Route::get('/complaint',[ComplaintController::class,'complaints'])->name('complaint');
 
+Route::get('/register',[UserController::class,'register'])->name('userregister');
+Route::post('/store',[UserController::class,'registerstore'])->name('store');
+
+Route::get('/farmingtips',[TipsController::class,'farmingtips'])->name('farmingtips.tips');
+Route::get('/farmingtips/descriptions',[TipsController::class,'descriptions'])->name('descriptions');
+
+
+Route::get('/complaintstatus',[ComplaintStatusController::class,'complaint'])->name('ComplaintStatus');
+
+
+Route::get('/complaint',[ComplaintController::class,'complaints'])->name('complaint');
 Route::post('/complaint/store',[ComplaintController::class,'complaintstore'])->name('complaint.store');
 
 Route::get('/advertisements',[AdvertiseController::class,'advertisements'])->name('advertise');
-
 Route::get('/advertisemnts/advertisement',[Advertisecontroller::class,'advertise'])->name('advertise.advertisement');
+
+
 Route::get('/login',[UserController::class,'userlogin'])->name('userlogin');
+Route::post('/login',[UserController::class,'userloginpost'])->name('userlogin.post');
 
 // Backend
 
 Route::get('/admin/login',[BackendUser::class,'login'])->name('admin.login');
-Route::post('/admin/login/post',[BackendUser::class,'loginPost'])->name('admin.login.post');
+// Route::post('/admin/login/post',[BackendUser::class,'loginPost'])->name('admin.login.post');
 // admin panel
 Route::group(['prefix'=>'admin','middleware'=>'auth','role'],function(){
 
@@ -55,6 +63,7 @@ Route::post('/farmer/accountopen',[FarmerController::class,'farmeropenacc'])->na
 
 // complaint
 Route::get('/complaints',[ComplaintsController::class,'complaints'])->name('allcomplaints.complaints');
+Route::get('/complaints/description',[ComplaintsController::class,'description'])->name('description');
 
 
 Route::get('/dashboard',[DashboardController::class,'dash'])->name('dashboard.dash');

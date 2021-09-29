@@ -20,7 +20,7 @@ class Farmingtipscontroller extends Controller
             'Category'=>$request->category,
             'Crop_Name'=>$request->crop_name,
             'Problem_Type'=>$request->problem_type,
-            
+            'description'=>$request->description,
           
                
         ]);

@@ -18,6 +18,7 @@ class CreateFarmingtipsTable extends Migration
             $table->text('Category');
             $table->text('Crop_Name');
             $table->text('Problem_Type');
+            $table->text('description');
             
 
             $table->timestamps();

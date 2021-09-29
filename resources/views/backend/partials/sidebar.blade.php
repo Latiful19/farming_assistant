@@ -36,7 +36,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('allcomplaints.complaints')}}">
               <i class="sv-nav-link-icon"></i>
-              <span class="menu-title">complaints</span>
+              <span class="menu-title">Problems</span>
             </a>
           </li>
 

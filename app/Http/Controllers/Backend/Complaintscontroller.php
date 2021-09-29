@@ -13,5 +13,11 @@ class ComplaintsController extends Controller
         $complaints=complaint::all();
         return view ('backend.layouts.allcomplaints.complaints',compact('complaints'));
     }
+    public function description()
+    {
+        $description=complaint::all();
+        return view ('backend.layouts.allcomplaints.description',compact('description'));
+    }
+    
     
 }

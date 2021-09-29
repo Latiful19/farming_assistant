@@ -103,7 +103,7 @@
                         <li class="nav-item">
             <a class="nav-link" href="{{route('ComplaintStatus')}}">
               <i class="sv-nav-link-icon"></i>
-              <span class="menu-title">Complaint Status</span>
+              <span class="menu-title">Problem Status</span>
             </a>
           </li>
 
@@ -111,7 +111,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('complaint')}}">
               <i class="sv-nav-link-icon"></i>
-              <span class="menu-title">Complaint </span>
+              <span class="menu-title">Problem Section</span>
             </a>
           </li>
                 
