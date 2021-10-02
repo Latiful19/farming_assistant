@@ -104,6 +104,16 @@ body {
         {{ session()->get('success') }}
     </div>
 @endif
+
+@if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 		<hr>
         <div class="form-group">
 			<label>Full Name</label>
@@ -119,7 +129,7 @@ body {
         </div>
         <div class="form-group">
 			<label>Mobile_No</label>
-            <input type="number" class="form-control" name="mobile_no" required="required">
+            <input type="text" class="form-control" name="mobile_no" required="required">
         </div>
         <div class="form-group">
 			<label>Address</label>
@@ -131,7 +141,7 @@ body {
         </div>
 		<div class="form-group">
 			<label>Confirm Password</label>
-            <input type="password" class="form-control" name="confirm_password" required="required">
+            <input type="password" class="form-control" name="password_confirmation" required="required">
         </div>
 		<div class="form-group form-check">
 			<input type="checkbox" class="form-check-input" required="required">

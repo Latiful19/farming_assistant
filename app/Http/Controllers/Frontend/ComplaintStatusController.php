@@ -13,6 +13,14 @@ class ComplaintStatusController extends Controller
         $complaints=complaint::all();
         return view ('frontend.layouts.complaintstatus',compact('complaints'));
     }
+    public function statuses($id)
+    {
+complaint::find($id)->update([
+
+
+]);
+
+    }
 }
 
 

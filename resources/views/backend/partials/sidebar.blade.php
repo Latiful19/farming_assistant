@@ -2,6 +2,16 @@
     <div class="position-sticky pt-3">
         <ul class="nav">
 
+
+        @if(auth()->user()->role=='admin')
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+            <i class="fas fa-tachometer-alt"></i>
+              {{auth()->user()->Full_Name}}
+             
+            </a>
+          </li>
+
         
     
           <li class="nav-item">
@@ -47,7 +57,15 @@
             </a>
           </li>
 
-          
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('solutions')}}">
+            <i class="sv-nav-link-icon"></i>
+              <span class="menu-title">Solution</span>
+             
+            </a>
+          </li>
+
+          @endif
           
           
         </ul>

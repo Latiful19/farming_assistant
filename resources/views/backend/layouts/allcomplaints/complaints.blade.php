@@ -24,13 +24,15 @@
       <td>{{$data->User_name}}</td>
       <td>{{$data->Category}}</td>
       <td>{{$data->problem_name}}</td>
-      <td>{{$data->Image}}</td>
-      <td>{{$data->status}}</td>
-      <td><a href="{{route('description')}}" class="btn btn-primary">View Details</a></td>
+      <td>
+                <img src="{{url('/uploads/'.$data->Image)}}" width="100px" alt="problem_image">
+            </td>
+      <td>{{$data->status}}</td>>
+      <td><a href="{{route('description',$data->id)}}" class="btn btn-primary">View Details</a></td>
     </tr>
 @endforeach
 
-
+</tbody>
 
 
 

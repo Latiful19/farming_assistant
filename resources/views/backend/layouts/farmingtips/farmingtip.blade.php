@@ -21,6 +21,7 @@
 <th>Category</th>
 <th>Crop Name</th>
 <th>Problem Type</th>
+<th>Action</th>
 </tr>
 </thead>
 <tbody>
@@ -32,6 +33,7 @@
 <th scope="row">{{$cat->Category}}</th>
 <th scope="row">{{$cat->Crop_Name}}</th>
 <th scope="row">{{$cat->Problem_Type}}</th>
+<td><a href="#"> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a> </td>
 </tr>
 @endforeach
 

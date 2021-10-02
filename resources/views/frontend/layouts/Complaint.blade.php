@@ -1,7 +1,7 @@
 @extends('frontend.master')
 @section('contents')
   
-<form action="{{route('complaint.store')}}" method="post">
+<form action="{{route('complaint.store')}}" method="post" enctype="multipart/form-data">
   @csrf
   
   <div class="form-group">
@@ -33,7 +33,7 @@
   <div class="form-group">
     <label for="exampleFormControlFile1">Image</label>
     <div class="custom-file">
-    <input type="file" class="form-control" name='image' >
+    <input type="file" class="form-control" name='problem_image'>
     
     <br></br>
     

@@ -17,7 +17,7 @@ class Farmercontroller extends Controller
     public function farmeropenacc(Request $openacc){
         // dd($openacc->all());
         Farmeraccount::create([
-            // field name from DB     field name from the blade file
+            // field name from DB field name from the blade file
 
             'name'=>$openacc->name,
             'Phone'=>$openacc->phone,

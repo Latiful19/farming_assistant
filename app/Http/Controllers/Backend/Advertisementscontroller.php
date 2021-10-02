@@ -30,4 +30,17 @@ class Advertisementscontroller extends Controller
         ]);
         return redirect()->back()->with('success','Post added successfully.');
     }
+    
+    public function delete($id)
+       {
+        //  dd($house_id);
+         $ad=advertisement::find($id);
+        if($ad)
+        {
+            $ad->delete();
+            return redirect()->back()->with('message','Ad Deleted successfully.');
+        }
+        return redirect()->back()->with('message','No Ad found to delete.');
+       }
 }
+

@@ -16,14 +16,24 @@ class ComplaintController extends Controller
     }
 
 public function complaintstore (Request $request)
+
 {
+    // dd($request->all());
+    $fileName='';
+            if($request->hasFile('problem_image'))
+            {
+                $file=$request->file('problem_image');
+               //generate file name here
+                $fileName=date('Ymdhms').'.'.$file->getClientOriginalExtension();
+                $file->storeAs('/uploads',$fileName);
+            }
     // dd($request->all());
     Complaint::create([
 
         'Category'=>$request->category,
         'User_name'=>$request->User_name,
         'problem_name'=>$request->Problem_name,
-        'Image'=>$request->image,
+        'Image'=>$fileName,
         'Description'=>$request->description,
     ]);
     return redirect()->back();

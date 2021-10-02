@@ -81,6 +81,11 @@
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
+
+               
+          
+
+
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                     <li class="nav-item">
@@ -129,11 +134,15 @@
               <i class="sv-nav-link-icon"></i>
               <span class="menu-title">Login</span>
             </a>
-          </li>
-                    </ul>
-                </div>
-                
-            </div>
+
+            <li class="nav-item">
+            <a class="nav-link" href="{{route('user.logout')}}">
+              <i class="sv-nav-link-icon"></i>
+              <span class="menu-title">Logout</span>
+            </a>
+            
+    </div>
+
             <!-- Start Side Menu -->
             
             <!-- End Side Menu -->
@@ -152,6 +161,7 @@
 
         <!-- End Navigation -->
     </header>
+    
     <!-- End Main Top -->
 
 

@@ -27,23 +27,16 @@ class Farmingtipscontroller extends Controller
            
            return redirect()->back()->with('success','Tips added successfully.');
     }
+    public function delete($id)
+       {
+        //  dd($ad_id);
+         $tip=farmingtip::find($id);
+        if($tip)
+        {
+            $tip->delete();
+            return redirect()->back()->with('message','tips Deleted successfully.');
+        }
+        return redirect()->back()->with('message','No tips found to delete.');
+       }
 
-
-
-    // public function registerstore(Request $request)
-    // {
-    //     User::create([
-    //         'Full_Name'=>$request->fullname,
-    //         'User_Name'=>$request->username,
-    //         'Email'=>$request->email,
-    //         'Mobile_No'=>$request->mobile_no,
-    //         'Address'=>$request->address,
-    //         'role'=> 'farmer',
-    //         'password'=>bcrypt($request->password),
-          
-               
-    //     ]);
-           
-    //        return redirect()->back()->with('success','User Registration Succeccfully.');
-    // }  
 }

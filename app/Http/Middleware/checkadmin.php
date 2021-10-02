@@ -21,7 +21,7 @@ class checkadmin
             return $next($request);
         }else
         {
-return redirect()->back()->with('message','You do not have permission');
+        return redirect()->back()->with('message','You do not have permission');
         }
        
     }

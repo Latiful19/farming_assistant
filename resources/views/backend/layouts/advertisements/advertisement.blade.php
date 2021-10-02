@@ -17,6 +17,7 @@
       <th scope="col">Price</th>
       <th scope="col">Probable Suply Date</th>
       <th scope="col">Status</th>
+      <th scope="col">Action</th>
       
     </tr>
   </thead>
@@ -32,6 +33,7 @@
       <td>{{$Ad->Price}}</td>
       <td>{{$Ad->Probable_Suply_Date}}</td>
       <td>{{$Ad->Status}}</td>
+      <td><a href="{{route('advertise.delete',$Ad->id)}}"> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a> </td>
       
     </tr>
 @endforeach

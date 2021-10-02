@@ -38,7 +38,7 @@ body {
 }
 
 .container {
-    padding: 130px;
+    padding: 75px;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #ffffff!important;
@@ -87,7 +87,11 @@ h4 {
 </style>
 <body>
 
+
 <!-- Page Content -->
+<form action="{{route('userlogin.post')}}" method="post">
+                    @csrf
+                    
 <div class="container">
     <div class="row">
         <div class="col-md-offset-6 col-md-4 text-center">
@@ -95,19 +99,35 @@ h4 {
               <div class="form-login"></br>
                 <h2>Secure Login</h2>
                 </br>
-                <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="username"/>
+                @if(session()->has('message'))
+                <span class="alert alert-danger">{{session()->get('message')}}</span>
+            @endif
+</br>
+</br>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input  name="email" placeholder="Enter your email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
                 </br></br>
-                <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="password"/>
-                </br></br>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input  name="password" placeholder="Enter your password" type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+
                 <div class="wrapper">
                         <span class="group-btn">
-                            <a href="#" class="btn btn-danger btn-md">login <i class="fa fa-sign-in"></i></a>
+                        <button type="submit" class="btn btn-danger btn-md">login </button>
                         </span>
                 </div>
+
+
+               
+                
             </div>
         </div>
     </div>
-    </br></br></br>
+    </form>
+    </br></br>
     <!--footer-->
     <div class="footer text-white text-center">
         <p>LK farming Assistant| All rights reserved</p>
@@ -116,3 +136,12 @@ h4 {
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
