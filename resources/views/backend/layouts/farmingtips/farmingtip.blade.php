@@ -17,9 +17,9 @@
 <table class="table">
 <thead class="thead-primary">
 <tr>
-<th>Category-ID</th>   
+<th>Tips No:</th>   
 <th>Category</th>
-<th>Crop Name</th>
+<th>Crop/Cattle Name</th>
 <th>Problem Type</th>
 <th>Action</th>
 </tr>
@@ -33,7 +33,7 @@
 <th scope="row">{{$cat->Category}}</th>
 <th scope="row">{{$cat->Crop_Name}}</th>
 <th scope="row">{{$cat->Problem_Type}}</th>
-<td><a href="#"> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a> </td>
+<td><a href="{{route('delete',$cat->id)}}"> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a> </td>
 </tr>
 @endforeach
 
@@ -68,14 +68,14 @@
         <option selected>Select Category</option>
         <option>Vegetable</option>
         <option>Fruit</option>
-        <option>Corn</option>
+        <option>Crop</option>
         <option>Cattle</option>
       </select>
     </div>
 
     <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="crop_name">Crop Name</label>
+      <label for="crop_name">Crop/Cattle Name</label>
       <input type="text" name="crop_name" class="form-control" id="crop_name">
     </div>
   

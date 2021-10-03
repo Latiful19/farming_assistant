@@ -14,7 +14,7 @@
 <table class="table">
 <thead class="thead-primary">
 <tr>
-<th>Category-ID</th>   
+<th>Tips No:</th>   
 <th>Category</th>
 <th>Crop Name</th>
 <th>Problem Type</th>

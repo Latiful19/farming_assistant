@@ -42,7 +42,7 @@ class UserController extends Controller
                
         ]);
            
-           return redirect()->back()->with('success','User Registration Succeccfully.');
+           return redirect()->back()->with('success','User Registration Successful.');
     }  
     public function userlogin()
 { 

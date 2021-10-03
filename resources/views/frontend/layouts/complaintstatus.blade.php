@@ -2,6 +2,7 @@
 @section('contents')
 
 <table class="table">
+
  
   <thead class="thead-dark">
     <tr>
@@ -11,6 +12,7 @@
       <th scope="col">problem name</th>
       <th scope="col">Image</th>
       <th scope="col">status</th>
+      <th scope="col">Actoin</th>
     </tr>
   </thead>
   <tbody>
@@ -22,6 +24,7 @@
       <td>{{$data->problem_name}}</td>
       <td>{{$data->Image}}</td>
       <td>{{$data->status}}</td>
+      <td><a href="{{route('complaints.solutions',$data->id)}}" class="btn btn-primary">view solution</a></td>
     </tr>
 @endforeach
 

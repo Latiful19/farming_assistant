@@ -13,13 +13,27 @@ class ComplaintStatusController extends Controller
         $complaints=complaint::all();
         return view ('frontend.layouts.complaintstatus',compact('complaints'));
     }
-    public function statuses($id)
+    // public function statuses($id)
+    // {
+    //     complaint::find($id)->update([
+
+    //     ]);
+
+    // }
+
+
+    // public function solution($id)
+    // {
+    //     // dd($id);
+    //     $complaints = Complaint::with('solutions')->where('id',$id)->first();
+    //     return view('frontend.layouts.solution',compact('complains'));
+    // }
+    public function solutions($id)
     {
-complaint::find($id)->update([
-
-
-]);
-
+        // dd($id);
+        $complaints=Complaint::with('solutions')->where('id',$id)->first();
+      
+        return view('frontend.layouts.solution',compact('complaints'));
     }
 }
 

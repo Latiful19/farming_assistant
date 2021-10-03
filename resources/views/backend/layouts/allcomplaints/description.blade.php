@@ -46,7 +46,7 @@
       <form action="{{route('solutions.solution')}}" method="post">
         @csrf
          
-    
+    <input type="hidden" value="{{$description->id}}" name="complaint_id">
         <div class="form-group">
     <label for="exampleFormControlTextarea1">Solution</label>
     <textarea class="form-control" name="solution" id="exampleFormControlTextarea1" placeholder="write solution" rows="3"></textarea>

@@ -20,8 +20,9 @@ class CreateAdvertisementsTable extends Migration
             $table->string('Amount');
             $table->string('Quality');
             $table->string('Price');
-            $table->string('Probable_Suply_Date');
+            $table->string('date');
             $table->string('Status')->default('pending');
+            $table->string('claimed_by')->nullable();
             
 
 

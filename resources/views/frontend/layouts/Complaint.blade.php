@@ -4,11 +4,7 @@
 <form action="{{route('complaint.store')}}" method="post" enctype="multipart/form-data">
   @csrf
   
-  <div class="form-group">
-			<label for="text">User name</label>
-            <input type="text" class="form-control" id="text" name="User_name" required="required">
-        </div>
-
+  
 <div class="form-group">
 			<label for="text">Problem name</label>
             <input type="text" class="form-control" id="text" name="Problem_name" required="required">
@@ -46,6 +42,17 @@
 
 <button type="submit" class="btn btn-dark">Submit Complaint </button>
 </form>
+@if(session('success'))
+        <div class="alert alert-success">
+            {!! session('success') !!}
+        </div>
+@endif
+
+@if(session('error'))
+        <div class="alert alert-danger">
+            {!! session('error') !!}
+    </div>
+    @endif
 
 
 @endsection

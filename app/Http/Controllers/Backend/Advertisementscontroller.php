@@ -23,7 +23,7 @@ class Advertisementscontroller extends Controller
             'Amount'=>$request->Amount,
             'Quality'=>$request->Quality,
             'Price'=>$request->Price,
-            'Probable_Suply_Date'=>$request->Probable_Suply_Date,
+            'date'=>$request->date,
             
             
 

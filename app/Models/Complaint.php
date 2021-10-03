@@ -9,4 +9,10 @@ class Complaint extends Model
 {
     use HasFactory;
     protected $guarded=[];
+
+
+    public function solutions()
+    {
+        return $this->hasMany(Solution::class);
+    }
 }

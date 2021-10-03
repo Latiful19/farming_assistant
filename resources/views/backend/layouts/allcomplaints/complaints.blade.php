@@ -28,7 +28,11 @@
                 <img src="{{url('/uploads/'.$data->Image)}}" width="100px" alt="problem_image">
             </td>
       <td>{{$data->status}}</td>>
-      <td><a href="{{route('description',$data->id)}}" class="btn btn-primary">View Details</a></td>
+      <td >
+        <span style="padding-right: 6px;"><a href="{{route('description',$data->id)}}" class="btn btn-primary">View Details</a></span>
+        <a href="{{route('status.update',$data->id)}}" class="btn btn-success">solved</a>
+        <a href="{{route('statuses.updated',$data->id)}}" class="btn btn-danger">unsolved</a>
+      </td>
     </tr>
 @endforeach
 

@@ -82,8 +82,21 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
 
+                @auth
                
-          
+                @if(auth()->user()->role=='farmer')
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('farmingtips.tips')}}">
+              <i class="sv-nav-link-icon"></i>
+              <span class="menu-title">{{auth()->user()->User_Name}}</span>
+            </a>
+          </li>
+
+          @endif
+          @endauth
+
+
 
 
                 <div class="collapse navbar-collapse" id="navbar-menu">
@@ -102,7 +115,7 @@
             </a>
           </li>
 
-                        <li class="nav-item">
+                       
 
 
                         <li class="nav-item">

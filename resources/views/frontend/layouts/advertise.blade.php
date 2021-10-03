@@ -16,6 +16,7 @@
   </thead>
   <tbody>
   @foreach($advertisements as $Ad)
+
     <tr>
       <td>{{$Ad->id}}</td>
       <td>{{$Ad->Product_Category}}</td>
@@ -23,8 +24,9 @@
       <td>{{$Ad->Amount}}</td>
       <td>{{$Ad->Quality}}</td>
       <td>{{$Ad->Price}}</td>
-      <td>{{$Ad->Probable_Suply_Date}}</td>
+      <td>{{$Ad->date}}</td>
       <td>{{$Ad->Status}}</td>
+      <td><a href="{{route('claim.status',$Ad->id)}}" class="btn btn-success">Claim</a></td>
       
     </tr>
     @endforeach

@@ -19,10 +19,39 @@ class ComplaintsController extends Controller
         $description=complaint::find($id);
         return view ('backend.layouts.allcomplaints.description',compact('description'));
     }
-    public function solution()
+    public function solution(Request $request)
     {
-        return view('backend.layouts.allcomplaints.description');
+        solution::create([
+            'solution'    =>$request->solution,
+            'complaint_id'=>$request->complaint_id,
+
+        ]);
+
+        return Redirect()->back();
     }
+    public function status(Request $request,$id)
+    {
+        $complaint=Complaint::find($id);
+        if ($complaint->status) {
+            $complaint->update([
+                'status' =>'solved',
+            ]);
+        }
+        return redirect()->back()->with('message','problem solved.');
+
+    }
+    public function statuses(Request $request,$id)
+    {
+        $complaint=Complaint::find($id);
+        if ($complaint->status) {
+            $complaint->update([
+                'status' =>'unsolved',
+            ]);
+        }
+        return redirect()->back()->with('message','problem is not solved.');
+
+    }
+
 
     
     

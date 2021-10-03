@@ -57,13 +57,13 @@
             </a>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="{{route('solutions')}}">
             <i class="sv-nav-link-icon"></i>
               <span class="menu-title">Solution</span>
              
             </a>
-          </li>
+          </li> -->
 
           @endif
           

@@ -17,6 +17,7 @@
       <th scope="col">Price</th>
       <th scope="col">Probable Suply Date</th>
       <th scope="col">Status</th>
+      <th scope="col">Claimed By</th>
       <th scope="col">Action</th>
       
     </tr>
@@ -31,8 +32,9 @@
       <td>{{$Ad->Amount}}</td>
       <td>{{$Ad->Quality}}</td>
       <td>{{$Ad->Price}}</td>
-      <td>{{$Ad->Probable_Suply_Date}}</td>
+      <td>{{$Ad->date}}</td>
       <td>{{$Ad->Status}}</td>
+      <td>{{$Ad->claimed_by}}</td>
       <td><a href="{{route('advertise.delete',$Ad->id)}}"> <i onclick="return confirm('Are you sure you want to delete this item?');"  class="fas fa-trash-alt"></i></a> </td>
       
     </tr>
@@ -90,16 +92,15 @@
         
         <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="Pricet">Price</label>
-      <input type="text" name="Price" class="form-control" id="Price" placeholder="Enter Price">
+      <label for="Price">Price</label>
+      <input min="0" type="number" name="Price" class="form-control" id="Price" placeholder="Enter Price">
     </div>
 
     <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="Probable_Suply_Date">Probable Suply Date</label>
-      <input type="text" name="Probable_Suply_Date" class="form-control" id="Probable_Suply_Date" placeholder="Enter Date">
+    <div class="form-group">
+    <input type="text" name="date" class="form-control datepicker" autocomplete="off">
+            </div>
 
-    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
       
 
@@ -113,9 +114,31 @@
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+
+
+<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"> -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+        <!-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+
+
+<script language="javascript">
+$('.datepicker').datepicker({ 
+
+startDate: new Date()
+
+});
+</script>
 
 
 @endsection

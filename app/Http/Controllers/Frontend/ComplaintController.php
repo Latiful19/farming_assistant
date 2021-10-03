@@ -31,12 +31,12 @@ public function complaintstore (Request $request)
     Complaint::create([
 
         'Category'=>$request->category,
-        'User_name'=>$request->User_name,
+        'User_name'=>auth()->user()->User_Name,
         'problem_name'=>$request->Problem_name,
         'Image'=>$fileName,
         'Description'=>$request->description,
     ]);
-    return redirect()->back();
+    return redirect()->back()->with('success','problem submitted Successfully.');
 
-}
+ }
 }

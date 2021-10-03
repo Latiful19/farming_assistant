@@ -35,25 +35,31 @@ Route::get('/farmingtips/descriptions',[TipsController::class,'descriptions'])->
 
 
 Route::post('/farmer/login/post',[UserController::class,'userloginpost'])->name('userlogin.post');
+
+
 Route::group(['prefix'=>'farmer','middleware'=>'authfarmer'],function(){
 
-Route::get('/complaintstatus',[ComplaintStatusController::class,'complaint'])->name('ComplaintStatus');
+    Route::get('/complaintstatus',[ComplaintStatusController::class,'complaint'])->name('ComplaintStatus');
 
 
-Route::get('/complaint',[ComplaintController::class,'complaints'])->name('complaint');
-Route::post('/complaint/store',[ComplaintController::class,'complaintstore'])->name('complaint.store');
+    Route::get('/complaint',[ComplaintController::class,'complaints'])->name('complaint');
+    Route::post('/complaint/store',[ComplaintController::class,'complaintstore'])->name('complaint.store');
 
-Route::get('/advertisements',[AdvertiseController::class,'advertisements'])->name('advertise');
-Route::get('/advertisemnts/advertisement',[Advertisecontroller::class,'advertise'])->name('advertise.advertisement');
+    Route::get('/advertisements',[AdvertiseController::class,'advertisements'])->name('advertise');
+    Route::get('/advertisemnts/advertisement',[Advertisecontroller::class,'advertise'])->name('advertise.advertisement');
+    Route::get('/solution/{id}',[ComplaintStatusController::class,'solutions'])->name('complaints.solutions');
 
+    Route::get('/advertise/{id}',[AdvertiseController::class,'claim'])->name('claim.status');
 
-
-Route::get('/farmer/logout',[UserController::class,'logout'])->name('user.logout');
+    Route::get('/farmer/logout',[UserController::class,'logout'])->name('user.logout');
 });
 // Backend
 
 Route::get('/admin/login',[BackendUser::class,'login'])->name('admin.login');
 Route::post('/admin/login/post',[BackendUser::class,'loginPost'])->name('admin.login.post');
+
+
+
 // admin panel
 Route::group(['prefix'=>'admin','middleware'=>['auth','role']],function(){
 
@@ -73,20 +79,29 @@ Route::get('/complaints/description/{id}',[ComplaintsController::class,'descript
 
 Route::get('/statuses/{id}',[ComplaintStatusController::class,'status'])->name('allcomplaints.status');
 
+
 // solution
 Route::post('/solution',[ComplaintsController::class,'solution'])->name('solutions.solution');
 Route::get('/solution',[SolutionController::class,'solved'])->name('solutions');
+
+Route::get('/status/{id}',[ComplaintsController::class,'status'])->name('status.update');
+Route::get('unsolved/status/{id}',[ComplaintsController::class,'statuses'])->name('statuses.updated');
 
 
 
 Route::get('/dashboard',[DashboardController::class,'dash'])->name('dashboard.dash');
 Route::get('/farmingtip',[Farmingtipscontroller::class,'farmingtip'])->name('farmingtips.farmingtip');
-Route::get('/delete/{id}',[Farmingtipscontroller::class,'delete'])->name('delete');
+Route::get('/tips/delete/{id}',[Farmingtipscontroller::class,'delete'])->name('delete');
 
 Route::post('/farmingtip/store',[Farmingtipscontroller::class,'store'])->name('farmingtips.store');
 Route::get('/retailer',[RetailersController::class,'retailer'])->name('retailers.retailer');
 Route::get('/registered',[BackendUser::class,'userlist'])->name('allregistered.registered');
+
+
 Route::get('/advertisement',[Advertisementscontroller::class,'advertisement'])->name('advertisements.advertisement');
 Route::post('/advertisemnts/advertisementstore',[Advertisementscontroller::class,'advertisementstore'])->name('advertisements.advertisementstore');
+
+
+
 Route::get('/delete/{id}',[AdvertisementsController::class,'delete'])->name('advertise.delete');
 });
