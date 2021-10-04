@@ -5,8 +5,7 @@
 					<div class="custom-select-box">
                         <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
 							<option>৳ BDT</option>
-							<option>$ USD</option>
-							<option>€ EUR</option>
+							
 						</select>
                     </div>
                     <div class="right-phone-box">

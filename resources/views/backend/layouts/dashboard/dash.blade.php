@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
-                        <div class="card bg-primary">
+                        <div class="card bg-success">
                             <div class="stat-widget-two card-body">
                                 <div class="stat-content">
                                     <div class="stat-text">Total Complaint</div>

@@ -9,7 +9,7 @@
   <thead class="thead-dark">
     <tr>
       
-    <th scope="col">Ad ID</th>
+    <th scope="col">Ad No:</th>
       <th scope="col">Product Category</th>
       <th scope="col">Product Name</th>
       <th scope="col">Amount</th>
@@ -24,9 +24,10 @@
   </thead>
   <tbody>
 
-  @foreach($advertisements as $Ad)
+  @foreach($advertisements as $key=>$Ad)
     <tr>
-      <td>{{$Ad->id}}</td>
+    
+      <td>{{$key+1}}</td>
       <td>{{$Ad->Product_Category}}</td>
       <td>{{$Ad->Product_Name}}</td>
       <td>{{$Ad->Amount}}</td>
@@ -98,7 +99,8 @@
 
     <div class="form-row">
     <div class="form-group">
-    <input type="text" name="date" class="form-control datepicker" autocomplete="off">
+    <label for="date">Date</label>
+    <input type="text" name="date" class="form-control datepicker"  id="date" placeholder="enter date" autocomplete="off">
             </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>

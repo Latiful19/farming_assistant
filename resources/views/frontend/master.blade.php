@@ -76,10 +76,7 @@
     <!-- End Footer  -->
 
     <!-- Start copyright  -->
-    <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2021 <a href="#">LK Farm</a> Design By :
-            <a href="https://html.design/">Latiful Khabir</a></p>
-    </div>
+    
     <!-- End copyright  -->
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>

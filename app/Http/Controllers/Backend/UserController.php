@@ -46,4 +46,36 @@ class UserController extends Controller
 
        return view('backend.layouts.allregistered.registered',compact('users'));
     }
+    public function experts()
+    {
+
+        return view('backend.layouts.experts.expert');
+
+    }
+    public function postexpert(Request $expert)
+    {
+        
+
+            User::create([
+                'Full_Name'=>$expert->fullname,
+                'User_Name'=>$expert->username,
+                'Email'=>$expert->email,
+                'Mobile_No'=>$expert->mobile_no,
+                'Address'=>$expert->address,
+                'role'=>$expert->username,
+                'password'=>bcrypt($expert->password),
+              
+                    
+            ]);
+         
+            
+
+            return redirect()->back()->with('success','Expert added successfully.');
+
+            
+
+      
+        
+    }
+
 }

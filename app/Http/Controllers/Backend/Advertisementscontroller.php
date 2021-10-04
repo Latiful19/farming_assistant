@@ -24,10 +24,9 @@ class Advertisementscontroller extends Controller
             'Quality'=>$request->Quality,
             'Price'=>$request->Price,
             'date'=>$request->date,
-            
-            
-
         ]);
+
+        
         return redirect()->back()->with('success','Post added successfully.');
     }
     

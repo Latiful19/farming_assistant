@@ -25,12 +25,12 @@
 <tr>
 @foreach($categories as $key=>$cat)
 
-<th scope="row">{{$key+1}}
+<td scope="row">{{$key+1}}> </td>
 
-<th scope="row">{{$cat->Category}}</th>
-<th scope="row">{{$cat->Crop_Name}}</th>
-<th scope="row">{{$cat->Problem_Type}}</th>
-<th><a href="{{route('descriptions')}}" class="btn btn-primary">View Details</a></th>
+<td scope="row">{{$cat->Category}}</td>
+<td scope="row">{{$cat->Crop_Name}}</td>
+<td scope="row">{{$cat->Problem_Type}}</td>
+<td><a href="{{route('descriptions')}}" class="btn btn-primary">View Details</a></td>
 
 
 </tr>

@@ -11,16 +11,17 @@
       <div class="navbar-menu-wrapper d-flex align-items-top"> 
         <ul class="navbar-nav">
           <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-            <h1 class="welcome-text">Hey Leon it's your website result  </h1>
-           <h5> <span class="text-black fw-bold">Farming is awesome </span> </h5>
+            <h1 class="welcome-text">Farming is awesome </h1>
+           <h5> <span class="text-black fw-bold">Let's Help Farmers </span> </h5>
             
           </li>
         </ul>
       </div>
       <div class="navbar-nav">
-        <div class="nav-item text-nowrap">
-            <a class="nav-link px-3 h3" href="{{route('logout')}}">Logout</a>
-        </div>
+        <div class="nav-item text-nowrap " >
+        
+            <a  class="btn btn-danger " href="{{route('logout')}}">Logout</a>
+       
     </div>
     </div>
       

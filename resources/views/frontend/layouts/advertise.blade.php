@@ -4,7 +4,7 @@
   <thead>
     
     <tr>
-    <th scope="col">Ad ID</th>
+    <th scope="col">Ad No:</th>
       <th scope="col">Product Category</th>
       <th scope="col">Product Name</th>
       <th scope="col">Amount</th>
@@ -15,10 +15,10 @@
     </tr>
   </thead>
   <tbody>
-  @foreach($advertisements as $Ad)
+  @foreach($advertisements as $key=>$Ad)
 
     <tr>
-      <td>{{$Ad->id}}</td>
+      <td>{{$key+1}}</td>
       <td>{{$Ad->Product_Category}}</td>
       <td>{{$Ad->Product_Name}}</td>
       <td>{{$Ad->Amount}}</td>

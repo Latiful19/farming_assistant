@@ -22,7 +22,7 @@ class UserController extends Controller
             'fullname'=>'required',
             'username'=>'required',
             'email'=>'required|email|unique:users,email',
-            'mobile_no'=>'required',
+            'mobile_no'=>'required|min:11|max:11',
             'address'=>'required',
             'password' => 'required|confirmed|min:6',
         ]);
@@ -38,8 +38,6 @@ class UserController extends Controller
             'Address'=>$request->address,
             'role'=> 'farmer',
             'password'=>bcrypt($request->password),
-          
-               
         ]);
            
            return redirect()->back()->with('success','User Registration Successful.');
